@@ -66,7 +66,7 @@ while true; do
     
     # 3. Determine Scheduled State
     # Default to WORK
-    local DESIRED_MODE="WORK"
+    DESIRED_MODE="WORK"
     
     # Check Sleep (Outside of working hours)
     if [ "$NOW" -lt "$START_DAY" ] || [ "$NOW" -ge "$END_DAY" ]; then

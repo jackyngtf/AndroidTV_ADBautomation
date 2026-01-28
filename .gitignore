@@ -1,0 +1,15 @@
+# ADB Keys (contains device-specific authentication)
+adb_keys/
+
+# Docker volumes
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
