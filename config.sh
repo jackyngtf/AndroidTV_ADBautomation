@@ -5,7 +5,7 @@ TV_IP="10.10.216.7"
 
 # --- MEDIA SOURCES ---
 VLC_PKG="org.videolan.vlc"
-# ABC News 24 Clean Stream (Updated)
+# ABC News 24 Clean Stream
 NEWS_URL="https://c.mjh.nz/abc-news.m3u8"
 # Local file on the TV's storage
 WORK_VIDEO="file:///storage/emulated/0/Movies/company_video.mp4"

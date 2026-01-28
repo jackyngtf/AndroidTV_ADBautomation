@@ -1,0 +1,12 @@
+services:
+  tv-controller:
+    build: .
+    container_name: tv_automation
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./config.sh:/app/config.sh
+      - ./scripts/scheduler.sh:/app/scheduler.sh
+      - ./adb_keys:/root/.android
