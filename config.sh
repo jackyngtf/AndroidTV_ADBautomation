@@ -8,7 +8,7 @@ VLC_PKG="org.videolan.vlc"
 # ABC News 24 Clean Stream
 NEWS_URL="https://c.mjh.nz/abc-news.m3u8"
 # Local file on the TV's storage
-WORK_VIDEO="file:///storage/889291F29291E54A/Cosmax%20NBT%20Company%20Intro%20Australia%20-%20ver2.mp4"
+WORK_VIDEO="file:///storage/889291F29291E54A/Cosmax.mp4"
 
 # --- SCHEDULE (24-hour format HHMM) ---
 # Start of day: TV turns ON and plays Work Video
