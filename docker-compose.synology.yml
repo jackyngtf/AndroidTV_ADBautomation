@@ -1,0 +1,14 @@
+services:
+  tv-controller:
+    build: /volume1/docker/tv_automation
+    container_name: tv_automation
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TZ=Australia/Melbourne
+    volumes:
+      # Use ABSOLUTE paths for Synology NAS
+      # Adjust /volume1/docker/tv_automation to match YOUR Synology path
+      - /volume1/docker/tv_automation/config.sh:/app/config.sh
+      - /volume1/docker/tv_automation/scripts/scheduler.sh:/app/scheduler.sh
+      - /volume1/docker/tv_automation/adb_keys:/root/.android

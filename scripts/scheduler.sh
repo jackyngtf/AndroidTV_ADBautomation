@@ -29,8 +29,13 @@ start_vlc() {
     # Ensure TV is awake
     adb -s $TV_IP shell input keyevent KEYCODE_WAKEUP
     
-    # Start VLC
-    # We use --ez from_start true to ensure it restarts if needed
+    # Force-stop VLC first to ensure clean switch
+    # Without this, VLC may ignore the new intent and stay on old content
+    echo "$(date): Force-stopping VLC..."
+    adb -s $TV_IP shell am force-stop $VLC_PKG
+    sleep 2
+    
+    # Start VLC fresh
     adb -s $TV_IP shell am start \
         -n $VLC_PKG/.gui.video.VideoPlayerActivity \
         -a android.intent.action.VIEW \
