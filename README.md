@@ -2,6 +2,15 @@
 
 Automated content scheduling for Android TV using ADB and Docker. This system automatically plays different content based on time schedules - perfect for workplace TVs showing news during lunch and training videos during work hours.
 
+## The Problem
+
+Workplace TVs needed to show different content at different times — training videos during work hours, news during lunch breaks — but nobody wanted to manage this manually every day, and a reboot mid-day left the TV showing the wrong thing. Manual scheduling via the TV's own UI was fragile and unattended.
+
+## The Solution
+
+A fully containerized scheduler that talks to the TV over the network via ADB. It checks the time every 30 seconds, decides the correct state (work video / news / sleep), and sends the right ADB commands. It is **state-based**, so a mid-day container restart correctly resumes the right content instead of starting from scratch.
+
+
 ## Features
 
 - ⏰ **Time-Based Scheduling**: Automatically switch content based on configurable time slots
